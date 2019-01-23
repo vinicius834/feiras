@@ -1,24 +1,23 @@
 from django.db import models
 
 class Feira(models.Model):
-    id = models.AutoField(primary_key=True)
-    long = models.CharField(max_length=255, null=False, default="")
-    lat = models.CharField(max_length=255, null=False, default="")
-    set_cens = models.CharField(max_length=255, null=False, default="")
-    areap = models.CharField(max_length=255, null=False, default="")
-    cod_dist = models.CharField(max_length=255, null=False, default="")
-    distrito = models.CharField(max_length=255, null=False, default="")
-    cod_sub_pref = models.CharField(max_length=255, null=False, default="")
-    sub_prefe = models.CharField(max_length=255, null=False, default="")
-    regiao5 = models.CharField(max_length=255, null=False, default="")
-    regiao8 = models.CharField(max_length=255, null=False, default="")
-    nome_feira = models.CharField(max_length=255, null=False, default="")
-    registro = models.CharField(max_length=255, null=False, default="")
-    logradouro = models.CharField(max_length=255, null=False, default="")
-    numero = models.CharField(max_length=255, null=False, default="")
-    bairro = models.CharField(max_length=255, null=False, default="")
-    referecia = models.CharField(max_length=255, null=False, default="")
-
+    id = models.AutoField(primary_key=True, null=False)
+    long = models.CharField(max_length=255, default="", blank=True)
+    lat = models.CharField(max_length=255, default="", blank=True)
+    set_cens = models.CharField(max_length=255, default="", blank=True)
+    areap = models.CharField(max_length=255, default="", blank=True)
+    cod_dist = models.CharField(max_length=255, default="", blank=True)
+    distrito = models.CharField(max_length=255, default="", blank=True)
+    cod_sub_pref = models.CharField(max_length=255, default="", blank=True)
+    sub_prefe = models.CharField(max_length=255, default="", blank=True)
+    regiao5 = models.CharField(max_length=255, default="", blank=True)
+    regiao8 = models.CharField(max_length=255, default="", blank=True)
+    nome_feira = models.CharField(max_length=255, default="")
+    registro = models.CharField(max_length=255, default="", blank=True)
+    logradouro = models.CharField(max_length=255, default="", blank=True)
+    numero = models.CharField(max_length=255, default="", blank=True)
+    bairro = models.CharField(max_length=255, default="", blank=True)
+    referecia = models.CharField(max_length=255, default="", blank=True)
 
     def __str__(self):
         return """{0},

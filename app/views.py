@@ -16,9 +16,10 @@ class FeiraViewSet(viewsets.ViewSet):
         return Response(new_feira.errors, status=status.HTTP_400_BAD_REQUEST)
 
     def update_feira(self, request, id):
-        response = Feira.objects.filter(id=id).update(**request.data)
+        feira_to_update = Feira.objects.filter(id=id)
+        response = feira_to_update.update(**request.data)
         if response == 1:
-            return Response({'data': 'Updated'},status=status.HTTP_200_OK)
+            return Response(self.serialize(feira_to_update).data,status=status.HTTP_200_OK)
         elif response == 0:
             return Response({'data': 'Not Updated'}, status=status.HTTP_400_BAD_REQUEST)
 
