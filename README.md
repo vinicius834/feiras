@@ -31,7 +31,8 @@ python import_data_csv.py
 ```
 ## OBS:
 
-By default the API is using SQLITE3 as database, but you can use database you wish. 
+- By default the API is using SQLITE3 as database, but you can use database you wish. 
+- The log is generated and will be saved in the root path directory with DEBUG.log name.
  
 ## Usage
 
