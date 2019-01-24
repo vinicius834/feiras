@@ -23,6 +23,10 @@ python manage.py makemigrations
 
 python manage.py migrate
 
+#import data from csv to data base
+python import_data_csv.py
+
+
 
 ```
 ## OBS:
