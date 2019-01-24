@@ -1,6 +1,4 @@
 import csv
-
-
 import os
 import sys
 
@@ -16,6 +14,7 @@ application = get_wsgi_application()
 print(os.path.dirname(__file__))
 
 from app.models import Feira
+
 def read_file():
     file_path =  'feiras/DEINFO_AB_FEIRASLIVRES_2014.csv'
     with open(file_path, 'rt') as csvfile:
