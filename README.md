@@ -41,6 +41,7 @@ By default the API is using SQLITE3 as database, but you can use database you wi
 python manage.py test
 
 #result and coverage report
+
 nosetests --with-coverage --cover-package=app --verbosity=1
 Creating test database for alias 'default'...
 ........
