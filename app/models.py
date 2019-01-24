@@ -19,6 +19,10 @@ class Feira(models.Model):
     bairro = models.CharField(max_length=255, default="", blank=True)
     referecia = models.CharField(max_length=255, default="", blank=True)
 
+    class Meta:
+        db_table = "feira"
+        ordering = ('id',)
+
     def __str__(self):
         return """{0},
                   {1},
